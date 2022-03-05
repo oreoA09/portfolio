@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+  font-family: 'Josefin Slab', serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(20, 20, 20);
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  width: 100%;
+}
+
+header ul{
+  display: flex;
+  padding: 30px 50px;
+  font-size: 18px;
+}
+
+header li{
+  list-style: none;
+  margin: 5px 15px;
+  transition: transform .2s;
+}
+
+#pages li:hover{
+  transform: scale(1.2);
+}
+
+#pages a:hover{
+  border-bottom: 1px solid #fff;
+}
+
+#pages a:active{
+  border-bottom: 1px solid #fff;
+}
+
+#socials li:hover{
+  transform: scale(1.4);
+}
+
+header a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  
+}
+
+header i{
+  font-size: 18px;
+}
+
+.hero-section{
+  text-align: center;
+  padding: 17vh 0vh 0vh 0vh;
+  background-color: rgb(20, 20, 20);
+  color: rgb(255, 255, 255);
+  margin: 0;
+}
+
+.hero-section h1{
+  font-size: 160px;
+  font-weight: 600px;
+  margin: 0;
+}
+
+.desc{
+  font-weight: 400px;
+  font-size: 28px;
+  margin: -10px 0px 0px 0px;
+}
+
+.scrolling-image-container {
+  overflow: hidden;
+}
+.scrolling-image {
+  background: url("wavey.svg") repeat-x;
+  height: 150px;
+  width: 7680px;
+  animation: slide 6s alternate infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-340px); /* The image width */
+  }
+}
+
+#main{
+  background-color: #ffffff;
+  margin: -30px 0px 120px 0px;
+  padding-top: 0px;
+}
+
+#main p{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* About section */
+/* Grid CSS */
+#left { 
+  height: auto;
+  padding: 25px 0 5px 30px;
+  }
+#right { 
+  height: auto; 
+  padding: 25px 30px 5px 10px;
+  /* text-align: center; */
+  }
+
+#about {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 10vw;
+  padding: 30px 20px;
+  align-items: center;
+}
+
+/* Skills bar */
+#right p{
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.html {width: 90%; background-color: rgb(3, 0, 41);}
+.sass {width: 50%; background-color: rgb(3, 0, 41);}
+.js {width: 70%; background-color: rgb(8, 2, 121);}
+.wp {width: 80%; background-color: rgb(8, 2, 121);}
+.ux {width: 90%; background-color: rgb(77, 77, 219);}
+.ui {width: 80%; background-color: rgb(77, 77, 219);}
+
+/* Footer */
+footer{
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgb(20, 20, 20);
+  color: rgb(255, 255, 255);
+  position: fixed;
+  bottom: 0;
+}
+
+/* Adding media queries for responsiveness */
+@media screen and (min-width: 600px) {
+  #about {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10vw;
+  padding: 30px 20px;
+  align-items: center;
+  text-align: left;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+  header {
+  flex-direction: column;
+  text-align: center;
+  width:100%;
+}
+  header ul{
+    padding: 0px;
+    justify-content: center;
+  }
+  #pages{
+  padding: 30px 0px 10px 0px;
+    margin: 0;
+}
+  #socials{
+    padding: 0px 0px 30px 0px;
+    margin: 0;
+  }
+.hero-section h1{
+  font-size: 100px;
+}
+  .desc{
+    font-size: 20px;
+  }
+}
